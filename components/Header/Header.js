@@ -57,7 +57,7 @@ const Navbar = () => {
     },
     {
       name: 'Resources',
-      href: '#',
+      href: '../../dumb/wallet',
     },
     {
       name: 'Create',

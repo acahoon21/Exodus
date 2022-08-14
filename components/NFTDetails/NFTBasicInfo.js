@@ -5,7 +5,7 @@ import NFTSubInfo from './NFTSubInfo'
 
 const style = {
   topContainer: `flex items-center justify-between`,
-  collectionTitle: `text-lg font-semibold text-blue-500`,
+  collectionTitle: `text-lg font-semibold text-[#fb4848]`,
   actionItems: `flex divide-x divide-gray-300 rounded-lg border border-gray-300`,
   actionItemContainer: `flex cursor-pointer items-center justify-center p-3`,
   icon: `h-6 w-6 text-gray-400`,

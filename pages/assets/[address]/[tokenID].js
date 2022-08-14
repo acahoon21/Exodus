@@ -34,7 +34,7 @@ const NFT = () => {
   }, [])
 
   useEffect(() => {
-    if(!address) router.replace('/')
+    if (!address) router.replace('/')
   }, [address])
 
   const getListing = async () => {
@@ -57,31 +57,31 @@ const NFT = () => {
       console.log(error)
     }
   }
-  
+
   return (
     <TopNavbarLayout>
-      <div className = {style.wrapper}>
+      <div className={style.wrapper}>
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <div className = {style.nftContainer}>
-            <div className = {style.leftContainer}>
-              <div className = {style.leftElement}>
-                <NFTImage image = {listing?.asset?.image} />
+          <div className={style.nftContainer}>
+            <div className={style.leftContainer}>
+              <div className={style.leftElement}>
+                <NFTImage image={listing?.asset?.image} />
               </div>
 
-              <div className = {style.leftElement}>
+              <div className={style.leftElement}>
                 <NFTDetails />
               </div>
             </div>
 
-            <div className = {style.rightContainer}>
-              <NFTBasicInfo name = {listing?.asset?.name} />
+            <div className={style.rightContainer}>
+              <NFTBasicInfo name={listing?.asset?.name} />
 
-              <div className = {style.buyoutContainer}>
-                <NFTSalesInfo price = 
-                  {listing?.buyoutCurrencyValuePerToken?.displayValue} 
-                  buyNFT = {buyNFT} />
+              <div className={style.buyoutContainer}>
+                <NFTSalesInfo price=
+                  {listing?.buyoutCurrencyValuePerToken?.displayValue}
+                  buyNFT={buyNFT} />
               </div>
             </div>
           </div>

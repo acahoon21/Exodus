@@ -15,7 +15,7 @@ const style = {
   price: `text-3xl font-bold`,
   buttonsContainer: `flex space-x-4`,
   button: `flex w-[14rem] items-center cursor-pointer justify-center space-x-4 rounded-lg py-2 text-white`,
-  purchaseButton: `bg-blue-500`,
+  purchaseButton: `bg-[#f51111] hover:bg-[#fb4848]`,
   offerButton: `border border-black bg-[#363840]`,
   buttonIcon: 'h-6 w-6'
 }

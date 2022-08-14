@@ -3,7 +3,7 @@ import { AiFillEye, AiFillHeart } from 'react-icons/ai'
 const style = {
   wrapper: `flex space-x-6 py-6`,
   textInfoContainer: `text-lg font-medium text-gray-400`,
-  owner: `text-blue-500`,
+  owner: `text-[#fb4848]`,
   iconTextInfoContainer: `flex items-center space-x-2`,
   icon: `h-7 w-7 text-gray-400`,
 }
@@ -12,7 +12,7 @@ const NFTSubInfo = () => {
   return(
     <div className = {style.wrapper}>
       <div className = {style.textInfoContainer}>
-        Owned by <span className = {style.owner}>ABC MDynamic</span>
+        Owned by <span className = {style.owner}>MDynamic</span>
       </div>
       <div className = {style.iconTextInfoContainer}>
         <AiFillEye className = {style.icon} />

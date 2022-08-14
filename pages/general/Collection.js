@@ -4,9 +4,10 @@ import { useRouter } from 'next/router'
 import { useAddress } from '@thirdweb-dev/react'
 import { MdVerified } from 'react-icons/md'
 import TopNavbarLayout from '../../layouts/TopNavbarLayout'
-import CollectionStats from './CollectionStats'
+import CollectionStats from '../../components/Home/CollectionStats'
 import { collectionData } from '../../static/collections'
-import Listings from './Listings'
+import Listings from '../../components/Home/Listings'
+import Footer from '../../components/Footer'
 
 const style = {
   wrapper: `flex flex-col bg-[#202226] relative flex flex-col`,
@@ -26,7 +27,7 @@ const style = {
   descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500`,
 }
 
-export default function Home() {
+const Collection = () => {
   const address = useAddress()
   const [collection] = useState(collectionData)
   const router = useRouter()
@@ -96,7 +97,10 @@ export default function Home() {
 
            <Listings />
         </div>
+        <Footer />
       </TopNavbarLayout>
     </div>
   )
 }
+
+export default Collection
