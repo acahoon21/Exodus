@@ -1,7 +1,7 @@
 //import { useAddress, useMetamask } from '@thirdweb-dev/react'
 //import Main from '../components/Home'
 import Hero from '../components/Pages/Hero'
-import type { NextPage } from 'next'
+//import type { NextPage } from 'next'
 import Head from 'next/head'
 import Footer from '../components/Footer'
 
@@ -20,7 +20,7 @@ export default function Home() {
   return <> <Hero/> </>
 }
 */
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div>
       <Head>
