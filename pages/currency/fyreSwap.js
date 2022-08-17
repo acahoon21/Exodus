@@ -5,6 +5,7 @@ import ethLogo from '../../assets/eth.png'
 import Image from 'next/image'
 import TopNavbarLayout from '../../layouts/TopNavbarLayout'
 import Footer from '../../components/Footer'
+import HeadF from '../../components/Head'
 
 const style = {
     title: 'relative flex items-center justify-center text-white text-[40px] font-semibold',
@@ -24,61 +25,64 @@ const style = {
 
 const FyreSwap = () => {
     return (
-        <TopNavbarLayout>
-            <div className={style.wrapper}>
-                <div className={style.content}>
-                    <div className={style.title}>
-                        🔥FyreSwap🔥
-                    </div>
-                    <div className={style.formHeader}>
-                        <div className={style.swap}>Swap</div>
-                        <div>
-                            <RiSettings3Fill />
+        <div>
+            <HeadF />
+            <TopNavbarLayout>
+                <div className={style.wrapper}>
+                    <div className={style.content}>
+                        <div className={style.title}>
+                            🔥FyreSwap🔥
                         </div>
-                    </div>
-                    <div className={style.transferPropContainer}>
-                        <input
-                            type="text"
-                            className={style.transferPropInput}
-                            placeholder="0.0"
-                            pattern="^[0-9]*[.,]?[0-9]*$"
-                            onChange={(e) => handleChange(e, 'amount')}
-                        />
-                        <div className={style.currencySelector}>
-                            <div className={style.currencySelectorContent}>
-                                <div className={style.currencySelectorIcon}>
-                                    <Image src={ethLogo} alt="eth logo" height={20} width={20} />
-                                </div>
-                                <div className={style.currencySelectorTicker}>ETH</div>
-                                <AiOutlineDown className={style.currencySelectorArrow} />
+                        <div className={style.formHeader}>
+                            <div className={style.swap}>Swap</div>
+                            <div>
+                                <RiSettings3Fill />
                             </div>
                         </div>
-                    </div>
-                    <div className={style.transferPropContainer}>
-                        <input
-                            type="text"
-                            className={style.transferPropInput}
-                            placeholder="0.0"
-                            pattern="^[0-9]*[.,]?[0-9]*$"
-                            onChange={(e) => handleChange(e, 'amount')}
-                        />
-                        <div className={style.currencySelector}>
-                            <div className={style.currencySelectorContent}>
-                                <div className={style.currencySelectorIcon}>
-                                    <Image src={ethLogo} alt="eth logo" height={20} width={20} />
+                        <div className={style.transferPropContainer}>
+                            <input
+                                type="text"
+                                className={style.transferPropInput}
+                                placeholder="0.0"
+                                pattern="^[0-9]*[.,]?[0-9]*$"
+                                onChange={(e) => handleChange(e, 'amount')}
+                            />
+                            <div className={style.currencySelector}>
+                                <div className={style.currencySelectorContent}>
+                                    <div className={style.currencySelectorIcon}>
+                                        <Image src={ethLogo} alt="eth logo" height={20} width={20} />
+                                    </div>
+                                    <div className={style.currencySelectorTicker}>ETH</div>
+                                    <AiOutlineDown className={style.currencySelectorArrow} />
                                 </div>
-                                <div className={style.currencySelectorTicker}>ETH</div>
-                                <AiOutlineDown className={style.currencySelectorArrow} />
                             </div>
                         </div>
-                    </div>
-                    <div onClick={(e) => handleSubmit(e)} className={style.confirmButton}>
-                        Confirm
+                        <div className={style.transferPropContainer}>
+                            <input
+                                type="text"
+                                className={style.transferPropInput}
+                                placeholder="0.0"
+                                pattern="^[0-9]*[.,]?[0-9]*$"
+                                onChange={(e) => handleChange(e, 'amount')}
+                            />
+                            <div className={style.currencySelector}>
+                                <div className={style.currencySelectorContent}>
+                                    <div className={style.currencySelectorIcon}>
+                                        <Image src={ethLogo} alt="eth logo" height={20} width={20} />
+                                    </div>
+                                    <div className={style.currencySelectorTicker}>ETH</div>
+                                    <AiOutlineDown className={style.currencySelectorArrow} />
+                                </div>
+                            </div>
+                        </div>
+                        <div onClick={(e) => handleSubmit(e)} className={style.confirmButton}>
+                            Confirm
+                        </div>
                     </div>
                 </div>
-            </div>
-            <Footer />
-        </TopNavbarLayout>
+                <Footer />
+            </TopNavbarLayout>
+        </div>
     )
 }
 
