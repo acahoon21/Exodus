@@ -4,7 +4,7 @@ import { BiChevronUp, BiChevronDown } from 'react-icons/bi'
 const style = {
   buttonWrapper: `flex items-center justify-between p-4`,
   buttonLeft: `flex items-center space-x-4`,
-  title: `font-semibold`,
+  title: `font-semibold text-gray-400`,
   rightIcon: `h-6 w-6 text-gray-400`,
   innerTextContainer: `p-4 bg-[#313339]`,
 }

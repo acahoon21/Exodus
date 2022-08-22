@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAddress, useMarketplace } from '@thirdweb-dev/react'
 import { BigNumber } from 'ethers'
-import TopNavbarLayout from '../../../layouts/TopNavbarLayout'
 import NFTImage from '../../../components/NFTDetails/NFTImage'
 import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo'
 import NFTDetails from '../../../components/NFTDetails/NFTDetails'
@@ -15,6 +14,7 @@ const style = {
   leftElement: `hidden lg:block`,
   rightContainer: `flex flex-1 flex-col space-y-4`,
   buyoutContainer: `flex-1`,
+  loading: `text-white`
 }
 
 const NFT = () => {
@@ -59,35 +59,33 @@ const NFT = () => {
   }
 
   return (
-    <TopNavbarLayout>
-      <div className={style.wrapper}>
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <div className={style.nftContainer}>
-            <div className={style.leftContainer}>
-              <div className={style.leftElement}>
-                <NFTImage image={listing?.asset?.image} />
-              </div>
-
-              <div className={style.leftElement}>
-                <NFTDetails />
-              </div>
+    <div className={style.wrapper}>
+      {loading ? (
+        <div className={style.loading}>Loading...</div>
+      ) : (
+        <div className={style.nftContainer}>
+          <div className={style.leftContainer}>
+            <div className={style.leftElement}>
+              <NFTImage image={listing?.asset?.image} />
             </div>
 
-            <div className={style.rightContainer}>
-              <NFTBasicInfo name={listing?.asset?.name} />
-
-              <div className={style.buyoutContainer}>
-                <NFTSalesInfo price=
-                  {listing?.buyoutCurrencyValuePerToken?.displayValue}
-                  buyNFT={buyNFT} />
-              </div>
+            <div className={style.leftElement}>
+              <NFTDetails />
             </div>
           </div>
-        )}
-      </div>
-    </TopNavbarLayout>
+
+          <div className={style.rightContainer}>
+            <NFTBasicInfo name={listing?.asset?.name} />
+
+            <div className={style.buyoutContainer}>
+              <NFTSalesInfo price=
+                {listing?.buyoutCurrencyValuePerToken?.displayValue}
+                buyNFT={buyNFT} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

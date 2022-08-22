@@ -4,10 +4,6 @@ import React from 'react'
 import fyrefliLogo from '../../assets/fyrefli.png'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
-//import { MdOutlineAccountBalanceWallet } from 'react-icons/md'
-//import Chains from '../Chains'
-//import { ConnectButton } from 'web3uikit'
-//import Account from './Account/Account'
 
 const style = {
     wrapper: 'bg-[#04111d] w-screen px-[1.2rem] py-[0.3rem] flex',
@@ -39,7 +35,7 @@ const Header1 = () => {
             />
         </div>
         <div className={style.headerItems}>
-            <Link href='../general/Collection'>
+            <Link href='../../general/Collection'>
                 <div className={style.headerItem}> Collections </div>
             </Link>
             <Link href='../exchanges'>

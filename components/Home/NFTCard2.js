@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { AiOutlineHeart } from 'react-icons/ai'
+import { MediaRenderer } from '@thirdweb-dev/react'
 
 const style = {
   wrapper: `relative flex h-[300px] w-[200px] cursor-pointer flex-col rounded-lg bg-[#333333] shadow-lg transition-all duration-300 hover:shadow-2xl`,
@@ -18,11 +19,11 @@ const style = {
   likesCounter: `text-xs text-gray-400`,
 }
 
-const NFTCard = ({listing}) => {
+const NFTCard2 = ({listing}) => {
   return (
     <div className = {style.wrapper}>
       <div className = {style.imageContainer}>
-        <Image 
+        <MediaRenderer
           className = {style.nftImage}
           src = {listing.asset.image}
           height = {200}
@@ -72,4 +73,4 @@ const NFTCard = ({listing}) => {
   )
 }
 
-export default NFTCard
+export default NFTCard2

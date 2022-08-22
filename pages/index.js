@@ -2,8 +2,6 @@
 //import Main from '../components/Home'
 import Hero from '../components/Pages/Hero'
 //import type { NextPage } from 'next'
-import Head from 'next/head'
-import Footer from '../components/Footer'
 
 
 const style = {
@@ -23,14 +21,8 @@ export default function Home() {
 const Home = () => {
   return (
     <div>
-      <Head>
-        <title>FYREFLi</title>
-        <link rel="icon" href="/favFyre.png" />
-      </Head>
-
       <main>
         <Hero />
-        <Footer />
       </main>
     </div>
   )
