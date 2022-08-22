@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { AiOutlineHeart } from 'react-icons/ai'
+import { MediaRenderer } from '@thirdweb-dev/react'
 
 const style = {
   wrapper: `rounded-lg border dark:border-transparent bg-[#313339]`,
@@ -25,7 +26,7 @@ const NFTImage = ({image}) => {
       </div>
 
       <div>
-        {image&&<Image
+        {image&&<MediaRenderer
           src = {image}
           width = {448}
           height = {448}
