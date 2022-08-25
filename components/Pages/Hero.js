@@ -35,8 +35,12 @@ const Hero = () => {
                             <Link href='../general/Collection'>
                                 <button className={style.accentedButton}>Explore</button>
                             </Link>
-                            <button className={style.button}>Create</button>
-                            <button className={style.gameButton}>Play!</button>
+                            <Link href='../general/create'>
+                                <button className={style.button}>Create</button>
+                            </Link>
+                            <Link href='../general/games'>
+                                <button className={style.gameButton}>Play!</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={style.cardContainer}>

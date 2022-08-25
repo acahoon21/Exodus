@@ -47,7 +47,9 @@ const Header2 = () => {
             <div className={style.button}>
                 <ConnectWallet />
             </div>
-            <div className={style.headerItem}> Chains </div>
+            <Link href='../../general/selection'>
+                <div className={style.headerItem}> Chains </div>
+            </Link>
         </div>
     </div>;
 }

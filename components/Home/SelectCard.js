@@ -19,7 +19,7 @@ const style = {
   likesCounter: `text-xs text-gray-400`,
 }
 
-const NFTCard2 = ({listing}) => {
+const NFTCard = ({listing}) => {
   return (
     <div className = {style.wrapper}>
       <div className = {style.imageContainer}>
@@ -73,4 +73,4 @@ const NFTCard2 = ({listing}) => {
   )
 }
 
-export default NFTCard2
+export default NFTCard

@@ -38,13 +38,21 @@ const Header1 = () => {
             <Link href='../../general/Collection'>
                 <div className={style.headerItem}> Collections </div>
             </Link>
-            <Link href='../exchanges'>
+            <Link href='../../general/stats'>
                 <div className={style.headerItem}> Stats </div>
             </Link>
-            <div className={style.headerItem}> Resources </div>
-            <div className={style.headerItem}> Create </div>
-            <div className={style.headerItem}> Education </div>
-            <div className={style.headerItem}> Play! </div>
+            <Link href='../../general/resources'>
+                <div className={style.headerItem}> Resources </div>
+            </Link>
+            <Link href='../../general/create'>
+                <div className={style.headerItem}> Create </div>
+            </Link>
+            <Link href='../../general/education'>
+                <div className={style.headerItem}> Education </div>
+            </Link>
+            <Link href='../../general/games'>
+                <div className={style.headerItem}> Play! </div>
+            </Link>
         </div>
     </div>;
 }

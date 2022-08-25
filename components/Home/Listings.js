@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useMarketplace } from '@thirdweb-dev/react'
+import { useMarketplace, useActiveListings } from '@thirdweb-dev/react'
 import NFTCard from './NFTCard'
 
 const style = {
@@ -9,8 +9,8 @@ const style = {
 }
 
 const Listings = () => {
-  const [listings, setListings] = useState([])
   const marketplace = useMarketplace("0x8F449a9ea0F414140C7c06Af4A63BD1FB2DAE2Da")
+  const {data: listings, isLoading: loadingListings} = useActiveListings(marketplace)
 
   useEffect(()=> {
     getListings()
@@ -27,11 +27,13 @@ const Listings = () => {
   }
   return (
     <div className = {style.wrapper}>
-      {listings.length > 0 ? (
-      <>
-        {listings?.map((listing, index)=> (
+      {loadingListings ? (
+      <div className={style.loading}>Loading listings...</div>
+      ) : (
+        <>
+        {listings?.map((listing) => (
         <Link
-          key = {index}
+          key = {listing.id}
           href = {`/assets/${listing.assetContractAddress}/${listing.id}`}
         >
           <a>
@@ -41,8 +43,6 @@ const Listings = () => {
         
         ))}
       </>
-      ) : (
-        <div className={style.loading}>Loading...</div>
       )}
     </div>
   )

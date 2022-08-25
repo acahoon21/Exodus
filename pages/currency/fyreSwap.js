@@ -16,8 +16,12 @@ const style = {
     currencySelectorIcon: `flex items-center`,
     currencySelectorTicker: `mx-2`,
     currencySelectorArrow: `text-lg`,
-    confirmButton: `bg-[#f51111] my-2 rounded-2xl py-6 px-8 text-xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-black`,
+    confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
+    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
+    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
+    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
+    info: `w-screen flex items-center justify-center text-gray-500`
 }
 
 const FyreSwap = () => {
@@ -28,8 +32,14 @@ const FyreSwap = () => {
                     <div className={style.title}>
                         🔥FyreSwap🔥
                     </div>
+                    <div>
+                        <br/>
+                    </div>
                     <div className={style.formHeader}>
                         <div className={style.swap}>Swap</div>
+                        <button className={style.binanceButton}>Binance</button>
+                        <button className={style.ethButton}>Ethereum</button>
+                        <button className={style.polyButton}>Polygon</button>
                         <div>
                             <RiSettings3Fill />
                         </div>
@@ -74,6 +84,15 @@ const FyreSwap = () => {
                         Confirm
                     </div>
                 </div>
+            </div>
+            <div>
+                <br/>
+            </div>
+            <div className={style.info}>
+                 Cryptcurrencies can be swapped on 3 different chains. Binance, Ethereum, and Polygon. Click a button above to switch chains.
+            </div>
+            <div>
+                <br/>
             </div>
         </div>
     )
