@@ -21,16 +21,16 @@ const style = {
     headerItem: 'text-white px-4 font-bold text-[#c8cacd] hover:text-[#fb4848] cursor-pointer',
     headerIcon: 'text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer',
     cheating: 'text-[#04111d] px-4 font-bold text-[#04111d]',
-    button: `border border-[#fb4848] bg-[#04111d] p-[0.1rem] text-xl font-semibold rounded-lg cursor-pointer text-[#fb4848]`,
+    button: `border px-1 border-[#fb4848] bg-[#04111d] p-[0.1rem] text-xl font-semibold rounded-lg cursor-pointer text-[#fb4848]`,
 }
 
 
 const Header2 = () => {
     return <div className={style.wrapper}>
         <div className={style.headerItems}>
-            <div className={style.headerIcon}>
-                <CgProfile />
-            </div>
+            <Link href='../../general/profile'>
+                <div className={style.headerIcon}><CgProfile /></div>
+            </Link>
             <div className={style.cheating}> ...I... </div>
             <Link href='../../currency/wallet'>
                 <div className={style.headerItem}> Wallet </div>
@@ -44,12 +44,19 @@ const Header2 = () => {
                 <div className={style.headerItem}> OnRamp </div>
             </Link>
             <div className={style.cheating}> Brittany </div>
-            <div className={style.button}>
-                <ConnectWallet />
-            </div>
-            <Link href='../../general/selection'>
-                <div className={style.headerItem}> Chains </div>
+            <Link href='../../general/games'>
+                <div className={style.headerItem}> Play! </div>
             </Link>
+            <div className={style.cheating}> ....... </div>
+            <div className={style.button}>
+                Chains
+            </div>
+            <div className={style.cheating}> . </div>
+            <Link href='../../general/test'>
+                <div className={style.headerItem}>Testing</div>
+            </Link>
+            <div className={style.cheating}> . </div>
+            <div className={style.button}> <ConnectWallet /> </div>
         </div>
     </div>;
 }

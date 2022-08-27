@@ -8,7 +8,7 @@ import NFTDetails from '../../../components/NFTDetails/NFTDetails'
 import NFTBasicInfo from '../../../components/NFTDetails/NFTBasicInfo'
 
 const style = {
-  wrapper: `h-[100vh] mx-auto flex max-w-2xl flex-col space-y-4 py-4 bg:-[#202226] lg:max-w-none lg:py-8 lg:px-24`,
+  wrapper: `h-[130vh] mx-auto flex max-w-2xl flex-col space-y-4 py-4 bg:-[#202226] lg:max-w-none lg:py-8 lg:px-24`,
   nftContainer: `flex flex-col lg:flex-row lg:space-x-4`,
   leftContainer: `flex flex-col space-y-4`,
   leftElement: `hidden lg:block`,

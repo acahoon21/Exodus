@@ -32,7 +32,7 @@ const OnRamp = () => {
                             Onramp fiat from your bank or card to crypto here! <br /> Works with Ethereum, Binance and Avalanche chains.
                         </div>
                         <div className={style.ctaContainer}>
-                            <button className={style.gameButton}>OnRamp</button>
+                            <button className={style.gameButton} /*onClick={Moralis.Plugins.fiat.buy()}*/>OnRamp</button>
                         </div>
                     </div>
                 </div>
@@ -40,5 +40,4 @@ const OnRamp = () => {
         </div>
     )
 }
-
 export default OnRamp

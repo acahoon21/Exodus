@@ -32,7 +32,7 @@ const Hero = () => {
                             FYREFLi ... Pirates here to take back the high seas.
                         </div>
                         <div className={style.ctaContainer}>
-                            <Link href='../general/Collection'>
+                            <Link href='../general/all'>
                                 <button className={style.accentedButton}>Explore</button>
                             </Link>
                             <Link href='../general/create'>
