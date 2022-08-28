@@ -44,7 +44,7 @@ const Header1 = () => {
             <Link href='../../general/resources'>
                 <div className={style.headerItem}> Resources </div>
             </Link>
-            <Link href='../../general/create'>
+            <Link href='../../general/3create'>
                 <div className={style.headerItem}> Create </div>
             </Link>
             <Link href='../../general/education'>

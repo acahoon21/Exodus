@@ -35,7 +35,7 @@ const Hero = () => {
                             <Link href='../general/all'>
                                 <button className={style.accentedButton}>Explore</button>
                             </Link>
-                            <Link href='../general/create'>
+                            <Link href='../general/3create'>
                                 <button className={style.button}>Create</button>
                             </Link>
                             <Link href='../general/games'>
