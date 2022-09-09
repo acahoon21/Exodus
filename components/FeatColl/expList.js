@@ -18,9 +18,13 @@ const ExpList = () => {
   return (
     <div className = {style.wrapper}>
         {nfts?.map((nft) => (
-          <a>
+          <div
+            key = {nft.metadata.id}
+          >
+            <a>
              <FeatCard nft = {nft}/>
-          </a>
+            </a>
+          </div>
          ))}
     </div>
   )
