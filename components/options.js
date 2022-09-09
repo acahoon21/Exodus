@@ -11,7 +11,7 @@ const style = {
   Ava: `text-red-500`
 }
 
-const MyLink = forwardRef((props, ref) => {
+/*const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props
   return (
     <Link href={href}>
@@ -20,9 +20,9 @@ const MyLink = forwardRef((props, ref) => {
       </a>
     </Link>
   )
-})
+})*/
 
-function Example() {
+const Example = () => {
   const [, switchNetwork] = useNetwork()
 
   return (

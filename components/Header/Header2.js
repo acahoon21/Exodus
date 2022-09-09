@@ -29,7 +29,7 @@ const style = {
 
 
 const Header2 = () => {
-    const [, switchNetwork] = useNetwork()
+    //const [, switchNetwork] = useNetwork()
 
     return <div className={style.wrapper}>
         <div className={style.headerItems}>
