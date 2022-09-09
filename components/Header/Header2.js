@@ -9,6 +9,9 @@ import { CgProfile } from 'react-icons/cg'
 //import { ConnectButton } from 'web3uikit'
 //import Account from './Account/Account'
 import ConnectWallet from '../ConnectWallet'
+import { useNetwork, ChainId } from '@thirdweb-dev/react'
+import Drop from '../options'
+
 
 const style = {
     wrapper: 'bg-[#04111d] w-screen px-[1.2rem] py-[0.2rem] flex',
@@ -26,6 +29,8 @@ const style = {
 
 
 const Header2 = () => {
+    const [, switchNetwork] = useNetwork()
+
     return <div className={style.wrapper}>
         <div className={style.headerItems}>
             <Link href='../../general/profile'>
@@ -48,11 +53,11 @@ const Header2 = () => {
                 <div className={style.headerItem}> Play! </div>
             </Link>
             <div className={style.cheating}> ....... </div>
-            <div className={style.button}>
-                Chains
+            <div className={style.button} /*onClick={() => switchNetwork(ChainId.Mainnet)}*/>
+                <Drop/>
             </div>
             <div className={style.cheating}> . </div>
-            <Link href='../../general/test'>
+            <Link href='/'>
                 <div className={style.headerItem}>Testing</div>
             </Link>
             <div className={style.cheating}> . </div>

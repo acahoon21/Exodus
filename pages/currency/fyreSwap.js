@@ -3,6 +3,7 @@ import { RiSettings3Fill } from 'react-icons/ri'
 import { AiOutlineDown } from 'react-icons/ai'
 import ethLogo from '../../assets/eth.png'
 import Image from 'next/image'
+import { useNetwork, ChainId } from '@thirdweb-dev/react'
 
 const style = {
     title: 'relative flex items-center justify-center text-white text-[40px] font-semibold',
@@ -18,13 +19,14 @@ const style = {
     currencySelectorArrow: `text-lg`,
     confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
-    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
-    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
-    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
+    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-black hover:bg-black hover:text-yellow-500 border border-yellow-500 hover:border-yellow-500 cursor-pointer',
+    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-black hover:bg-black hover:text-blue-500 border border-blue-500 hover:border-blue-500 cursor-pointer',
+    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-black hover:bg-black hover:text-purple-500 border border-purple-500 hover:border-purple-500 cursor-pointer',
     info: `w-screen flex items-center justify-center text-gray-500`
 }
 
 const FyreSwap = () => {
+    const [, switchNetwork] = useNetwork()
     return (
         <div>
             <div className={style.wrapper}>
@@ -37,9 +39,9 @@ const FyreSwap = () => {
                     </div>
                     <div className={style.formHeader}>
                         <div className={style.swap}>Swap</div>
-                        <button className={style.binanceButton}>Binance</button>
-                        <button className={style.ethButton}>Ethereum</button>
-                        <button className={style.polyButton}>Polygon</button>
+                        <button className={style.binanceButton} onClick={() => switchNetwork(ChainId.BSC)}>Binance</button>
+                        <button className={style.ethButton} onClick={() => switchNetwork(ChainId.Mainnet)}>Ethereum</button>
+                        <button className={style.polyButton} onClick={() => switchNetwork(ChainId.Polygon)}>Polygon</button>
                         <div>
                             <RiSettings3Fill />
                         </div>

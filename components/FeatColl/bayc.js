@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { AiOutlineHeart } from 'react-icons/ai'
-import { MediaRenderer } from '@thirdweb-dev/react'
+import { MediaRenderer, ThirdwebNftMedia, useNFTCollection, useNFTs } from '@thirdweb-dev/react'
 
 
 const style = {
@@ -9,7 +9,7 @@ const style = {
   nftImage: `rounded-t-lg object-cover`,
   nftLowerContainer: `flex h-1/4 flex-col justify-between p-4`,
   nftInfoContainer: `flex justify-between`,
-  collectionTitle: `text-sm text-gray-400`,
+  collectionTitle: `text-md text-gray-300`,
   nftTitle: `text-sm font-bold`,
   priceContainer: `flex flex-col items-end justify-center space-y-1`,
   priceTitle: `text-xs font-light text-gray-400`,
@@ -20,58 +20,44 @@ const style = {
   likesCounter: `text-xs text-gray-400`,
 }
 
-const NFTCard = ({listing}) => {
+// const NFTCard = ({listing}) . . . use that as an input for the mktplace contract later. 
+
+const BaCard = () => {
+  const nftCollection = useNFTCollection("0xca974F7E790D947E644B925e126A8cA7af3cBc8F");
+  const { data: nfts } = useNFTs(nftCollection, { start: 0, count: 1 });
+
   return (
     <div className = {style.wrapper}>
       <div className = {style.imageContainer}>
-        <MediaRenderer
+      {nfts?.map((nft) => (
+        <div key={nft.metadata.id.toString()}>
+        <ThirdwebNftMedia
           className = {style.nftImage}
-          src = {listing.asset.image}
+          metadata={nft.metadata}
           height = {200}
           width = {200}
           alt = 'nft'
         />
+         </div>
+      ))}
       </div>
 
       <div className = {style.nftLowerContainer}>
         <div className = {style.nftInfoContainer}>
           <div>
-            {listing.asset.collection && (
               <div className = {style.collectionTitle}>
-                {listing.asset?.collection?.name}
+                <h2>Bored Ape Yacht Club</h2>
               </div>
-            )}
 
             <div className = {style.nftTitle}>
-              {listing.asset.name}
+              <h1>...</h1>
             </div>
           </div>
 
-          <div className = {style.priceContainer}>
-            <div className = {style.priceTitle}>Buy at</div>
-            <div className = {style.wethImageContainer}>
-              <Image 
-                height = {16}
-                width = {16}
-                src = '/weth-logo.svg'
-                alt = 'weth'
-              />
-              <div className = {style.priceValue}>
-                {listing.buyoutCurrencyValuePerToken?.displayValue}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className = {style.likesContainer}>
-          <AiOutlineHeart className = {style.heartIcon} />
-          <div className = {style.likesCounter}>
-            {listing.asset?.stats?.favorites ?? 69}
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default NFTCard
+export default BaCard

@@ -2,22 +2,23 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useAddress } from '@thirdweb-dev/react'
-//import { MdVerified } from 'react-icons/md'
-//import CollectionStats from '../../components/Home/CollectionStats'
+import { MdVerified } from 'react-icons/md'
+import CollectionStats from '../../components/Home/CollectionStats'
 import { collectionData } from '../../static/collections'
 import Listings from '../../components/Home/Listings'
+import PunkList from '../../components/FeatColl/punkList'
 
 const style = {
   wrapper: `flex flex-col bg-[#202226] relative flex flex-col`,
-  container: `relative flex h-[300px] flex-col`,
-  bannerContainer: `absolute h-1/2 w-full`,
+  container: `relative flex h-[650px] flex-col`,
+  bannerContainer: `absolute h-1/3 w-full`,
   banner: `rounded-t-lg object-cover`,
-  collectionInfoWrapper: `absolute inset-0 top-1/3 z-10 h-2/3 -translate-y-5`,
+  collectionInfoWrapper: `absolute inset-0 top-1/3 z-10 h-2/3 -translate-y-16`,
   collectionInfoContainer: `flex flex-col items-center space-y-4`,
   collectionLogoContainer: `flex items-center justify-center rounded-full border-4 border-gray-100`,
   collectionLogo: `rounded-full object-cover`,
   collectionInfo: `flex flex-col items-center space-y-6 text-white`,
-  title: `text-4xl font-bold text-gray-200`,
+  title: `text-4xl font-bold text-white`,
   creatorInfoContainer: `flex items-center space-x-1`,
   creator: `text-sm font-medium text-white`,
   creatorName: `cursor-pointer text-blue-500`,
@@ -52,7 +53,7 @@ const Collection = () => {
           <div className={style.bannerContainer}>
             <Image
               className={style.banner}
-              src="/fireBanner.webp"
+              src={collection?.banner_image_url}
               layout='fill'
               alt='banner'
             />
@@ -63,7 +64,7 @@ const Collection = () => {
               <div className={style.collectionLogoContainer}>
                 <Image
                   className={style.collectionLogo}
-                  src="/favFyre.png"
+                  src={collection?.image_url}
                   height={128}
                   width={128}
                   alt='logo'
@@ -71,15 +72,30 @@ const Collection = () => {
               </div>
 
               <div className={style.collectionInfo}>
-                <div className={style.title}>Explore all NFTs for sale</div>
+                <div className={style.title}>{collection?.name}</div>
 
-                
+                <div className={style.creatorInfoContainer}>
+                  <div className={style.creator}>
+                    Created by{' '}
+                    <span className={style.creatorName}>
+                      {collection?.creator}
+                    </span>
+                  </div>
+                  <MdVerified className={style.verified} />
+                </div>
+              </div>
+              <div className={style.collectionStats}>
+                <CollectionStats stats={collection?.stats} />
+              </div>
+
+              <div className={style.descriptionContainer}>
+                {collection?.description}
               </div>
             </div>
           </div>
         </div>
 
-        <Listings />
+        <PunkList />
       </div>
     </div>
   )

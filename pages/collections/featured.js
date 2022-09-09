@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useAddress } from '@thirdweb-dev/react'
-//import { MdVerified } from 'react-icons/md'
-//import CollectionStats from '../../components/Home/CollectionStats'
+import { MdVerified } from 'react-icons/md'
+import CollectionStats from '../../components/Home/CollectionStats'
 import { collectionData } from '../../static/collections'
-import Listings from '../../components/Home/Listings'
+import FeatCollections from '../../components/FeatColl/featColls'
 
 const style = {
   wrapper: `flex flex-col bg-[#202226] relative flex flex-col`,
@@ -14,10 +14,10 @@ const style = {
   banner: `rounded-t-lg object-cover`,
   collectionInfoWrapper: `absolute inset-0 top-1/3 z-10 h-2/3 -translate-y-5`,
   collectionInfoContainer: `flex flex-col items-center space-y-4`,
-  collectionLogoContainer: `flex items-center justify-center rounded-full border-4 border-gray-100`,
+  collectionLogoContainer: `flex items-center justify-center rounded-full border-4 border-red-500`,
   collectionLogo: `rounded-full object-cover`,
   collectionInfo: `flex flex-col items-center space-y-6 text-white`,
-  title: `text-4xl font-bold text-gray-200`,
+  title: `text-4xl font-bold text-white`,
   creatorInfoContainer: `flex items-center space-x-1`,
   creator: `text-sm font-medium text-white`,
   creatorName: `cursor-pointer text-blue-500`,
@@ -26,7 +26,7 @@ const style = {
   collectionStats: `text-gray-400`
 }
 
-const Collection = () => {
+const Test = () => {
   const address = useAddress()
   const [collection] = useState(collectionData)
   const router = useRouter()
@@ -52,7 +52,7 @@ const Collection = () => {
           <div className={style.bannerContainer}>
             <Image
               className={style.banner}
-              src="/fireBanner.webp"
+              src="/betterCollect.webp"
               layout='fill'
               alt='banner'
             />
@@ -71,7 +71,7 @@ const Collection = () => {
               </div>
 
               <div className={style.collectionInfo}>
-                <div className={style.title}>Explore all NFTs for sale</div>
+                <div className={style.title}>Featured Collections</div>
 
                 
               </div>
@@ -79,10 +79,10 @@ const Collection = () => {
           </div>
         </div>
 
-        <Listings />
+        <FeatCollections />
       </div>
     </div>
   )
 }
 
-export default Collection
+export default Test

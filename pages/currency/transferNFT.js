@@ -20,8 +20,8 @@ const style = {
     currencySelectorArrow: `text-lg`,
     confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
-    switch1: `relative text-lg font-semibold px-8 py-1 bg-black rounded-lg mr-5 text-[#f51111] hover:bg-black hover:text-[#f51111] border border-[#f51111] hover:border-[#f51111] cursor-pointer`,
-    switch2: `relative text-lg font-semibold px-10 py-1 bg-black rounded-lg mr-5 text-[#f51111] hover:bg-black hover:text-[#f51111] border border-black hover:border-[#f51111] cursor-pointer`
+    switch1: `relative text-lg font-semibold px-10 py-1 bg-black rounded-lg mr-5 text-[#f51111] hover:bg-black hover:text-[#f51111] border border-[#f51111] hover:border-[#f51111] cursor-pointer`,
+    switch2: `relative text-lg font-semibold px-8 py-1 bg-black rounded-lg mr-5 text-[#f51111] hover:bg-black hover:text-[#f51111] border border-black hover:border-[#f51111] cursor-pointer`
 }
 
 const Wallet = () => {
@@ -36,10 +36,10 @@ const Wallet = () => {
                 </div>
                 <div className={style.formHeader}>
                     <div className={style.swap}>Transfer</div>
-                    <button className={style.switch1}>Crypto</button>
-                    <Link href='../../currency/transferNFT'>
-                        <button className={style.switch2}>NFTs</button>
+                    <Link href='../../currency/wallet'>
+                        <button className={style.switch2}>Crypto</button>
                     </Link>
+                    <button className={style.switch1}>NFTs</button>
                     <div>
                         <RiSettings3Fill />
                     </div>
@@ -48,19 +48,10 @@ const Wallet = () => {
                     <input
                         type="text"
                         className={style.transferPropInput}
-                        placeholder="0.0"
+                        placeholder="NFT Token Id"
                         pattern="^[0-9]*[.,]?[0-9]*$"
                         onChange={(e) => handleChange(e, 'amount')}
                     />
-                    <div className={style.currencySelector}>
-                        <div className={style.currencySelectorContent}>
-                            <div className={style.currencySelectorIcon}>
-                                <Image src={ethLogo} alt="eth logo" height={20} width={20} />
-                            </div>
-                            <div className={style.currencySelectorTicker}>ETH</div>
-                            <AiOutlineDown className={style.currencySelectorArrow} />
-                        </div>
-                    </div>
                 </div>
                 <div className={style.transferPropContainer}>
                     <input

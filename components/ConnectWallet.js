@@ -5,6 +5,7 @@ import {
     useNetwork,
     useAddress,
     useDisconnect,
+    useChainId,
   } from "@thirdweb-dev/react";
   export const ConnectWallet = () => {
     //const connectWithCoinbaseWallet = useCoinbaseWallet();
@@ -13,6 +14,7 @@ import {
     const disconnectWallet = useDisconnect();
     const address = useAddress();
     const network = useNetwork();
+    const chain = useChainId();
     // If a wallet is connected, show address, chainId and disconnect button
     if (address) {
       return (

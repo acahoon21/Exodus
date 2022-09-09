@@ -17,7 +17,8 @@ const style = {
     infoContainer: 'h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white',
     author: 'flex flex-col justify-center ml-4',
     name: '',
-    infoIcon: 'flex justify-end items-center flex-1 text-[#8a939b] text-3xl font-bold'
+    infoIcon: 'flex justify-end items-center flex-1 text-[#8a939b] text-3xl font-bold',
+    green: `text-green-500`
 }
 
 const Games = () => {
@@ -35,7 +36,7 @@ const Games = () => {
                         3D soulslike RPG 🧙🗡️👾
                     </div>
                     <div className={style.description}>
-                        2D platformer
+                        2D platformer <br/> <span className={style.green}>( In development )</span>
                     </div>
                     <div className={style.description}>
                         MMORPG

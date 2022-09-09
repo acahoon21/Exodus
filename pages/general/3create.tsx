@@ -20,10 +20,13 @@ import {
     currencySelectorIcon: `flex items-center`,
     currencySelectorTicker: `mx-2`,
     currencySelectorArrow: `text-lg`,
-    confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
+    confirmButton: `w-full bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
     ctaContainer: 'flex',
-    gameButton: 'relative text-lg font-semibold px-8 py-2 bg-[#f51111] rounded-lg mr-5 text-black hover:bg-[#fb4848] cursor-pointer',
+    gameButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 cursor-pointer',
+    directButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 cursor-pointer',
+    input: `hidden peer`,
+    list: `flex`,
 }
   
   const Create: NextPage = () => {
@@ -128,7 +131,7 @@ import {
         console.error(error);
       }
     }
-  
+
     return (
       <form onSubmit={(e) => handleCreateListing(e)}>
           <div>
@@ -144,27 +147,35 @@ import {
   
             {/* Toggle between direct listing and auction listing */}
             <div className={style.formHeader}>
+              <ul className={style.list}>
+                <li>
               <input
                 type="radio"
                 name="listingType"
                 id="directListing"
                 value="directListing"
                 defaultChecked
-                className={style.gameButton}
+                className={style.input}
+                //required
               />
-              <label htmlFor="directListing" className={style.gameButton}>
+              <label htmlFor="directListing" className={style.directButton}>
                 Direct Listing
               </label>
+              </li>
+              <li>
               <input
                 type="radio"
                 name="listingType"
                 id="auctionListing"
                 value="auctionListing"
-                className={style.gameButton}
+                className={style.input}
+                //required
               />
               <label htmlFor="auctionListing" className={style.gameButton}>
                 Auction Listing
               </label>
+              </li>
+              </ul>
             </div>
   
             {/* NFT Contract Address Field */}
