@@ -11,7 +11,7 @@ import {
   const style = {
     title: 'relative flex items-center justify-center text-gray-300 text-[40px] font-semibold',
     wrapper: `w-screen flex items-center justify-center mt-14`,
-    content: `bg-[#191B1F] w-[40rem] rounded-2xl p-4`,
+    content: `bg-[#191B1F] w-[40rem] rounded-2xl p-4 border border-red-800`,
     formHeader: `px-2 flex items-center justify-between font-semibold text-xl`,
     transferPropContainer: `bg-[#20242A] my-3 rounded-2xl p-2 text-3xl  border border-[#20242A] hover:border-[#41444F]  flex justify-between`,
     transferPropInput: `bg-transparent placeholder:text-[#B2B9D2] outline-none mb-6 w-full text-2xl text-white`,
@@ -23,8 +23,8 @@ import {
     confirmButton: `w-full bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
     ctaContainer: 'flex',
-    gameButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 cursor-pointer',
-    directButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 cursor-pointer',
+    gameButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 shadow-lg hover:shadow-red-500/60 cursor-pointer',
+    directButton: 'flex items-center relative text-lg font-semibold px-8 py-2 bg-black rounded-lg mr-5 text-[#fb4848] hover:bg-black border border-black hover:border-[#fb4848] peer-checked:text-red-500 peer-checked:border-red-500 shadow-lg hover:shadow-red-500/60 cursor-pointer',
     input: `hidden peer`,
     list: `flex`,
 }

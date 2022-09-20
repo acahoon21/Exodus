@@ -17,7 +17,7 @@ const style = {
   collectionLogoContainer: `flex items-center justify-center rounded-full border-4 border-red-500`,
   collectionLogo: `rounded-full object-cover`,
   collectionInfo: `flex flex-col items-center space-y-6 text-white`,
-  title: `text-4xl font-bold text-white`,
+  title: `text-4xl font-bold text-gray-200 underline underline-offset-8 decoration-red-500`,
   creatorInfoContainer: `flex items-center space-x-1`,
   creator: `text-sm font-medium text-white`,
   creatorName: `cursor-pointer text-blue-500`,
@@ -72,13 +72,11 @@ const Test = () => {
 
               <div className={style.collectionInfo}>
                 <div className={style.title}>Featured Collections</div>
-
-                
               </div>
             </div>
           </div>
         </div>
-
+        <div> <br/> </div>
         <FeatCollections />
       </div>
     </div>

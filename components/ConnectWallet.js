@@ -26,7 +26,7 @@ import {
     // If no wallet is connected, show connect wallet options
     return (
       <div>
-        <button onClick={() => connectWithMetamask()}>Connect MetaMask</button>
+        <button onClick={() => connectWithMetamask()}>Connect Wallet</button>
       </div>
     );
   };

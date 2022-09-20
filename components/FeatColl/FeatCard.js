@@ -23,7 +23,7 @@ const style = {
 // const NFTCard = ({listing}) . . . use that as an input for the mktplace contract later. 
 
 const FeatCard = ({ nft }) => {
-
+    console.log(nft)
     return (
         <div className={style.wrapper}>
             <div className={style.imageContainer}>
@@ -66,7 +66,7 @@ const FeatCard = ({ nft }) => {
         <div className={style.likesContainer}>
           <AiOutlineHeart className={style.heartIcon} />
           <div className={style.likesCounter}>
-            {nft.asset?.stats?.favorites ?? 69}
+            {nft.asset?.stats?.favorites ?? 235}
           </div>
         </div>
       </div>

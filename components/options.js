@@ -1,26 +1,21 @@
-import { forwardRef } from 'react'
-import Link from 'next/link'
+import React from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { useNetwork, ChainId } from '@thirdweb-dev/react'
 
 const style = {
-  Binance: `text-yellow-500`,
-  Ethereum: `text-blue-500`,
-  Polygon: `text-purple-500`,
-  Goerli: `text-white`,
-  Ava: `text-red-500`
+  Binance: `text-yellow-500 hover:text-yellow-200`,
+  Ethereum: `text-blue-500 hover:text-cyan-300`,
+  Polygon: `text-purple-500 hover:text-purple-300`,
+  Goerli: `text-gray-500 hover:text-gray-200`,
+  Ava: `text-red-500 hover:text-red-300`
 }
 
-/*const MyLink = forwardRef((props, ref) => {
-  let { href, children, ...rest } = props
-  return (
-    <Link href={href}>
-      <a ref={ref} {...rest}>
-        {children}
-      </a>
-    </Link>
-  )
-})*/
+/*
+Platform is made with next.js. Code written in React with Javascript. Styling is done with Tailwind css.
+I just copied and pasted the "Transition" wrap so I believe it was having no effect due to not being
+written with Tailwind. Tailwind has documentation for transitions and transforms. Feel free to contact
+me if you have any questions. 
+*/
 
 const Example = () => {
   const [, switchNetwork] = useNetwork()

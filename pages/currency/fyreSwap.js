@@ -8,7 +8,7 @@ import { useNetwork, ChainId } from '@thirdweb-dev/react'
 const style = {
     title: 'relative flex items-center justify-center text-white text-[40px] font-semibold',
     wrapper: `w-screen flex items-center justify-center mt-14`,
-    content: `bg-[#191B1F] w-[40rem] rounded-2xl p-4`,
+    content: `bg-[#191B1F] w-[40rem] rounded-2xl p-4 border border-red-800`,
     formHeader: `px-2 flex items-center justify-between font-semibold text-xl`,
     transferPropContainer: `bg-[#20242A] my-3 rounded-2xl p-6 text-3xl  border border-[#20242A] hover:border-[#41444F]  flex justify-between`,
     transferPropInput: `bg-transparent placeholder:text-[#B2B9D2] outline-none mb-6 w-full text-2xl text-white`,
@@ -19,9 +19,9 @@ const style = {
     currencySelectorArrow: `text-lg`,
     confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
-    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-black hover:bg-black hover:text-yellow-500 border border-yellow-500 hover:border-yellow-500 cursor-pointer',
-    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-black hover:bg-black hover:text-blue-500 border border-blue-500 hover:border-blue-500 cursor-pointer',
-    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-black hover:bg-black hover:text-purple-500 border border-purple-500 hover:border-purple-500 cursor-pointer',
+    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-yellow-300 hover:bg-black hover:text-yellow-100 border border-yellow-500 hover:border-yellow-100 cursor-pointer shadow-lg hover:shadow-yellow-500/80 bg-gradient-to-r from-yellow-500 via-purple-500 to-red-500',
+    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-cyan-300 hover:bg-black hover:text-cyan-100 border border-cyan-400 hover:border-cyan-100 cursor-pointer shadow-lg hover:shadow-cyan-500/90 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500',
+    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-purple-200 hover:bg-black hover:text-purple-100 border border-purple-400 hover:border-purple-100 cursor-pointer shadow-lg hover:shadow-purple-500 bg-gradient-to-r from-purple-500 via-indigo-500 to-red-500',
     info: `w-screen flex items-center justify-center text-gray-500`
 }
 

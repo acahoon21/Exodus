@@ -13,8 +13,9 @@ const style = {
     searchIcon: 'text-[#8a939b] mx-3 font-bold text-lg',
     searchInput: 'h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]',
     headerItems: 'flex items-center justify-end',
-    headerItem: 'text-white px-6 font-bold text-[#c8cacd] hover:text-[#fb4848] cursor-pointer',
+    headerItem: 'text-white px-4 font-bold hover:text-[#fb4848] border border-transparent hover:border-cyan-300 bg hover:bg-[#04111d] rounded-lg shadow-lg hover:shadow-cyan-400/90 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 ... cursor-pointer',
     headerIcon: 'text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer',
+    cheating: 'text-[#04111d] px-4 font-bold text-[#04111d]',
 }
 
 
@@ -35,6 +36,7 @@ const Header1 = () => {
             />
         </div>
         <div className={style.headerItems}>
+            <div className={style.cheating}> . </div>
             <Link href='../../collections/featured'>
                 <div className={style.headerItem}> Collections </div>
             </Link>
@@ -50,6 +52,7 @@ const Header1 = () => {
             <Link href='../../general/education'>
                 <div className={style.headerItem}> Education </div>
             </Link>
+            <div className={style.cheating}> . </div>
         </div>
     </div>;
 }

@@ -33,10 +33,7 @@ const Games = () => {
                         Play and earn NFTs!
                     </div>
                     <div className={style.description}>
-                        3D soulslike RPG 🧙🗡️👾
-                    </div>
-                    <div className={style.description}>
-                        2D platformer <br/> <span className={style.green}>( In development )</span>
+                        3D soulslike RPG 🧙🗡️👾 <span className={style.green}>( In development )</span>
                     </div>
                     <div className={style.description}>
                         MMORPG

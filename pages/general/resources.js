@@ -15,9 +15,9 @@ const style = {
     cardContainer: 'rounded-[3rem]',
     infoContainer: 'h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white',
     author: 'flex flex-col justify-center ml-4',
-    name: '',
+    name: '🍀',
     infoIcon: 'flex justify-end items-center flex-1 text-[#8a939b] text-3xl font-bold',
-    dev: 'text-green-500 container-[400px] text-4xl mt-[0.8rem] mb-[1rem] font-bold',
+    dev: 'container-[400px] text-4xl mt-[0.8rem] mb-[1rem] font-bold text-green-500',
 }
 
 const Resources = () => {

@@ -18,31 +18,37 @@ const FeatCollections = () => {
   const { data: nfts, isLoading: loadingListings } = useNFTs(hidden, { start: 0, count: 1 });
 
   return (
-    <div className = {style.wrapper}>
-        <Link
-          key = "ignore"
-          href = "../../collections/cryptoPunks"
-        >
-          <a>
-             <CpCard />
-          </a>
-        </Link>
-        <Link
-          key = "ignore"
-          href = "../../collections/boredApe"
-        >
-          <a>
-             <BaCard />
-          </a>
-        </Link>
-        <Link
-          key = "ignore"
-          href = "../../collections/experiment"
-        >
-          <a>
-             <ExpCard />
-          </a>
-        </Link>
+    <div className={style.wrapper}>
+      {loadingListings ? (
+        <div className={style.loading}>Loading Collections...</div>
+      ) : (
+        <>
+          <Link
+            key="ignore1"
+            href="../../collections/cryptoPunks"
+          >
+            <a>
+              <CpCard />
+            </a>
+          </Link>
+          <Link
+            key="ignore2"
+            href="../../collections/boredApe"
+          >
+            <a>
+              <BaCard />
+            </a>
+          </Link>
+          <Link
+            key="ignore3"
+            href="../../collections/experiment"
+          >
+            <a>
+              <ExpCard />
+            </a>
+          </Link>
+        </>
+      )}
     </div>
   )
 }

@@ -66,7 +66,7 @@ const NFTCard = ({listing}) => {
         <div className = {style.likesContainer}>
           <AiOutlineHeart className = {style.heartIcon} />
           <div className = {style.likesCounter}>
-            {listing.asset?.stats?.favorites ?? 69}
+            {listing.asset?.stats?.favorites ?? 235}
           </div>
         </div>
       </div>

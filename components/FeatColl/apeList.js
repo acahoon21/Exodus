@@ -10,23 +10,43 @@ const style = {
 
 const ApeList = () => {
   //const marketplace = useMarketplace("0x8F449a9ea0F414140C7c06Af4A63BD1FB2DAE2Da")
-  //const {data: listings, isLoading: loadingListings} = useActiveListings(marketplace)
+  //const {data: listings, isLoading: loadingListing} = useActiveListings(marketplace)
+
+  /*useEffect(()=> {
+    getListings()
+  }, [])
+  
+  const getListings = async () => {
+    try {
+      const list = await marketplace.getActiveListings()
+
+      setListings(list)
+    } catch (error) {
+      console.log(error)
+    }
+  }*/
 
   const hidden = useNFTCollection("0xca974F7E790D947E644B925e126A8cA7af3cBc8F");
   const { data: nfts, isLoading: loadingListings } = useNFTs(hidden, { start: 0, count: 100 });
   //0xca974F7E790D947E644B925e126A8cA7af3cBc8F
   return (
-    <div className = {style.wrapper}>
-        {nfts?.map((nft) => (
-        <Link
-            key = {nft.metadata.id}
-            href = {`/assets/0xca974F7E790D947E644B925e126A8cA7af3cBc8F/${nft.metadata.id}`}
-        >
-          <a>
-             <FeatCard nft = {nft}/>
-          </a>
-        </Link>
-         ))}
+    <div className={style.wrapper}>
+      {loadingListings ? (
+        <div className={style.loading}>Loading Listings...</div>
+      ) : (
+        <>
+          {nfts?.map((nft) => (
+            <Link
+              key={nft.metadata.id}
+              href={`/specialA/0xca974F7E790D947E644B925e126A8cA7af3cBc8F/${nft.metadata.id}`}
+            >
+              <a>
+                <FeatCard nft = {nft} />
+              </a>
+            </Link>
+          ))}
+        </>
+      )}
     </div>
   )
 }

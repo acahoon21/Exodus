@@ -17,7 +17,7 @@ const style = {
   collectionLogoContainer: `flex items-center justify-center rounded-full border-4 border-gray-100`,
   collectionLogo: `rounded-full object-cover`,
   collectionInfo: `flex flex-col items-center space-y-6 text-white`,
-  title: `text-4xl font-bold text-gray-200`,
+  title: `text-4xl font-bold text-gray-200 underline underline-offset-8 decoration-red-500`,
   creatorInfoContainer: `flex items-center space-x-1`,
   creator: `text-sm font-medium text-white`,
   creatorName: `cursor-pointer text-blue-500`,
@@ -78,7 +78,7 @@ const Collection = () => {
             </div>
           </div>
         </div>
-
+        <div> <br/> </div>
         <Listings />
       </div>
     </div>
