@@ -73,16 +73,16 @@ const NFT = () => {
         <div className={style.nftContainer}>
           <div className={style.leftContainer}>
             <div className={style.leftElement}>
-                {nfts?.map((nft) => (<NFTImage image={nft.metadata} />))}
+                {nfts?.map((nft) => (<div key={nft}> <NFTImage image={nft.metadata} /> </div>))}
             </div>
 
             <div className={style.leftElement}>
-            {nfts?.map((nft) => (<NFTDetails image={nft.metadata} />))}
+            {nfts?.map((nft) => (<div key={nft}> <NFTDetails image={nft.metadata} /> </div>))}
             </div>
           </div>
 
           <div className={style.rightContainer}>
-                {nfts?.map((nft) => (<NFTBasicInfo name={nft.metadata} />))}
+                {nfts?.map((nft) => (<div key={nft}> <NFTBasicInfo name={nft.metadata} /> </div>))}
 
             <div className={style.buyoutContainer}>
               <NFTSalesInfo price=
