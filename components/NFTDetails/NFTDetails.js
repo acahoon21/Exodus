@@ -7,7 +7,7 @@ const style = {
   icon: `h-5 w-5 text-gray-600`,
 }
 
-const NFTDetails = () => {
+const NFTDetails = (item) => {
   const dropdownData = [
     {
       title: 'Description',

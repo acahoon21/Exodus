@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { useAddress, useMarketplace } from '@thirdweb-dev/react'
+import { useAddress, useMarketplace, useNFTCollection, useNFTs } from '@thirdweb-dev/react'
 import { BigNumber } from 'ethers'
-import NFTImage from '../../../components/NFTDetails/NFTImage'
+import NFTImage from '../../../components/CollectDetails/CollectImage'
+//import NFTImage from '../../../components/NFTDetails/NFTImage'
 import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo'
 import NFTDetails from '../../../components/NFTDetails/NFTDetails'
-import NFTBasicInfo from '../../../components/NFTDetails/NFTBasicInfo'
+import NFTBasicInfo from '../../../components/CollectDetails/CollectBasicInfo'
+//import NFTBasicInfo from '../../../components/NFTDetails/NFTBasicInfo'
 
 const style = {
   wrapper: `h-[130vh] mx-auto flex max-w-2xl flex-col space-y-4 py-4 bg:-[#202226] lg:max-w-none lg:py-8 lg:px-24`,
@@ -22,12 +24,15 @@ const NFT = () => {
   const [listing, setListing] = useState()
   const [loading, setLoading] = useState(false)
   const router = useRouter()
-  const { tokenID } = router.query
-  console.log(tokenID)
+  const { tokenID, addy } = router.query
+  //console.log(tokenID)
 
   const marketplace = useMarketplace('0x8F449a9ea0F414140C7c06Af4A63BD1FB2DAE2Da')
 
   const address = useAddress()
+
+  const hidden = useNFTCollection(addy);
+  const { data: nfts } = useNFTs(hidden, { start: tokenID, count: 1 });
 
   useEffect(() => {
     getListing()
@@ -40,7 +45,7 @@ const NFT = () => {
   const getListing = async () => {
     try {
       setLoading(true)
-      const listing = await marketplace.getListing(BigNumber.from(tokenID))
+      const listing = await marketplace.getListing(BigNumber.from(1))
       setListing(listing)
       setLoading(false)
     }
@@ -58,6 +63,8 @@ const NFT = () => {
     }
   }
 
+  //listing?.asset?.image
+
   return (
     <div className={style.wrapper}>
       {loading ? (
@@ -66,16 +73,16 @@ const NFT = () => {
         <div className={style.nftContainer}>
           <div className={style.leftContainer}>
             <div className={style.leftElement}>
-              <NFTImage image={listing?.asset?.image} />
+                {nfts?.map((nft) => (<NFTImage image={nft.metadata} />))}
             </div>
 
             <div className={style.leftElement}>
-              <NFTDetails />
+            {nfts?.map((nft) => (<NFTDetails image={nft.metadata} />))}
             </div>
           </div>
 
           <div className={style.rightContainer}>
-            <NFTBasicInfo name={listing?.asset?.name} />
+                {nfts?.map((nft) => (<NFTBasicInfo name={nft.metadata} />))}
 
             <div className={style.buyoutContainer}>
               <NFTSalesInfo price=

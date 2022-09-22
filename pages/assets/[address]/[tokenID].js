@@ -23,7 +23,7 @@ const NFT = () => {
   const [loading, setLoading] = useState(false)
   const router = useRouter()
   const { tokenID } = router.query
-  console.log(tokenID)
+  //console.log(tokenID)
 
   const marketplace = useMarketplace('0x8F449a9ea0F414140C7c06Af4A63BD1FB2DAE2Da')
 
@@ -57,6 +57,8 @@ const NFT = () => {
       console.log(error)
     }
   }
+
+  console.log(listing)
 
   return (
     <div className={style.wrapper}>

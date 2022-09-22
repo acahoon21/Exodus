@@ -6,7 +6,7 @@ import { MediaRenderer, ThirdwebNftMedia, useNFTCollection, useNFTs } from '@thi
 const style = {
     wrapper: `relative flex h-[300px] w-[200px] cursor-pointer flex-col rounded-lg bg-[#333333] shadow-lg transition-all duration-300 hover:shadow-2xl hover:bg-[#4c505c]`,
     imageContainer: `h-3/4 overflow-hidden`,
-    nftImage: `rounded-t-lg object-cover`,
+    nftImage: `rounded-t-lg object-cover h-[200px] w-[200px]`,
     nftLowerContainer: `flex h-1/4 flex-col justify-between p-4`,
     nftInfoContainer: `flex justify-between`,
     collectionTitle: `text-lg text-gray-300`,

@@ -29,7 +29,7 @@ const Dropdown = ({title, icon}) => {
           </div>
         </Disclosure.Button>
         <Disclosure.Panel>
-          <div className = {style.innerTextContainer}>{title}</div>
+          <div className = {style.innerTextContainer}>Discovery</div>
         </Disclosure.Panel>
       </>
       )}

@@ -24,7 +24,7 @@ const PunkList = () => {
           {nfts?.map((nft) => (
             <Link
               key={nft.metadata.id}
-              href={`/assets/0x293d936ead39e353feEDAd47c921e9902c345957/${nft.metadata.id}`}
+              href={`/specialA/0x293d936ead39e353feEDAd47c921e9902c345957/${nft.metadata.id}`}
             >
               <a>
                 <FeatCard nft={nft} />

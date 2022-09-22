@@ -22,13 +22,14 @@ const ExpList = () => {
       ) : (
         <>
           {nfts?.map((nft) => (
-            <div
+            <Link
               key={nft.metadata.id}
+              href={`/specialA/0xeE6b946494a00d56839F9F3Ba2718686F24ad88d/${nft.metadata.id}`}
             >
               <a>
                 <FeatCard nft={nft} />
               </a>
-            </div>
+            </Link>
           ))}
         </>
       )}

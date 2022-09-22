@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { AiOutlineHeart } from 'react-icons/ai'
-import { MediaRenderer } from '@thirdweb-dev/react'
+import { MediaRenderer, ThirdwebNftMedia } from '@thirdweb-dev/react'
 
 const style = {
   wrapper: `rounded-lg border dark:border-transparent bg-[#313339]`,
@@ -8,11 +8,12 @@ const style = {
   likesContainer: `flex items-center justify-end space-x-2`,
   heartIcon: `h-5 w-5 text-red-500`,
   likesCount: `text-sm font-semibold text-gray-500`,
-  nftImage: `rounded-b-lg object-cover`
+  nftImage: `rounded-b-lg object-cover`,
+  test: `h-[448px] w-[448px]`
 }
 
 const NFTImage = ({image}) => {
-  console.log(image)
+  //console.log(image)
   return (
     <div className = {style.wrapper}>
       <div className = {style.nftHeader}>
@@ -26,8 +27,10 @@ const NFTImage = ({image}) => {
       </div>
 
       <div>
-        {image&&<MediaRenderer
-          src = {image}
+        {image&&<ThirdwebNftMedia
+          className = {style.test}
+          //src = {image}
+          metadata={image}
           width = {448}
           height = {448}
           alt = "nft"

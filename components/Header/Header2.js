@@ -63,7 +63,7 @@ const Header2 = () => {
             <div className={style.cheating}> . </div>
             <div className={style.button}> <ConnectWallet /> </div>
         </div>
-    </div>;
+    </div>
 }
 
 export default Header2

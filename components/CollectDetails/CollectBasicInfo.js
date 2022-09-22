@@ -1,6 +1,6 @@
 import { BiRefresh, BiLinkExternal } from 'react-icons/bi'
 import { MdShare, MdMoreVert } from 'react-icons/md'
-import NFTSubInfo from './NFTSubInfo'
+import NFTSubInfo from './CollectSubInfo'
 
 
 const style = {
@@ -44,7 +44,7 @@ const NFTBasicInfo = ({name}) => {
         </div>
       </div>
 
-      <div className = {style.assetTitle}>{name}</div>
+      <div className = {style.assetTitle}>{name.name}</div>
 
       <div className = {style.subInfoContainer}>
         <NFTSubInfo />

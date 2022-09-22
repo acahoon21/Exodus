@@ -5,7 +5,7 @@ import { useAddress } from '@thirdweb-dev/react'
 import { MdVerified } from 'react-icons/md'
 import CollectionStats from '../../components/Home/CollectionStats'
 import { collectionData } from '../../static/collections'
-import Listings from '../../components/Home/Listings'
+//import Listings from '../../components/Home/Listings'
 import PunkList from '../../components/FeatColl/punkList'
 
 const style = {
