@@ -9,8 +9,8 @@ import { CgProfile } from 'react-icons/cg'
 //import { ConnectButton } from 'web3uikit'
 //import Account from './Account/Account'
 import ConnectWallet from '../ConnectWallet'
-import { useNetwork, ChainId } from '@thirdweb-dev/react'
-import Drop from '../options'
+//import { useNetwork, ChainId } from '@thirdweb-dev/react'
+import Droppy from '../droppy'
 
 
 const style = {
@@ -25,6 +25,7 @@ const style = {
     headerIcon: 'text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer',
     cheating: 'px-4 font-bold text-transparent',
     button: `border px-1 border-[#fb4848] bg-[#04111d] p-[0.1rem] text-xl font-semibold rounded-lg cursor-pointer text-[#fb4848]`,
+    drop: ``
 }
 
 
@@ -46,7 +47,7 @@ const Header2 = () => {
             </Link>
             <div className={style.cheating}> ..You.. </div>
             <Link href='../../currency/onRamp'>
-                <div className={style.headerItem}> OnRamp </div>
+                <div className={style.headerItem}> Ramp </div>
             </Link>
             <div className={style.cheating}> Brittany </div>
             <Link href='../../general/games'>
@@ -54,10 +55,10 @@ const Header2 = () => {
             </Link>
             <div className={style.cheating}> ....... </div>
             <div className={style.button} /*onClick={() => switchNetwork(ChainId.Mainnet)}*/>
-                <Drop/>
+                <Droppy/>
             </div>
             <div className={style.cheating}> . </div>
-            <Link href='/'>
+            <Link href='../../currency/testing'>
                 <div className={style.headerItem}>Testing</div>
             </Link>
             <div className={style.cheating}> . </div>

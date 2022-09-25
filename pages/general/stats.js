@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const style = {
     wrapper: 'relative',
-    container: 'before:content-[""] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url("https://cdnb.artstation.com/p/assets/images/images/047/939/613/large/thefriedturkey-autumn018.jpg?1648807261")] before:bg-cover before:bg:-center before:opacity-30 before:blur',
+    container: 'before:content-[""] before:bg-black before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url("https://cdnb.artstation.com/p/assets/images/images/047/939/613/large/thefriedturkey-autumn018.jpg?1648807261")] before:bg-cover before:bg:-center before:opacity-30 before:blur',
     contentWrapper: 'flex h-screen relative justify-center flex-wrap items-center',
     copyContainer: 'w-1/2',
     title: 'relative text-white text-[46px] font-semibold',
