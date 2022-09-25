@@ -54,7 +54,7 @@ const OnRamp = () => {
                         <div> <br/></div>
                         <div className = {style.help}> If you are having issues click button below for more information and options.</div>
                         <div> <br/></div>
-                        <button className = {style.gameButton}><a href="https://widget.onramper.com?color=1d2d50" target="_blank"> OnRamp </a></button>
+                        <button className = {style.gameButton}><a href="https://widget.onramper.com?color=1d2d50" rel="noreferrer" target="_blank"> OnRamp </a></button>
                     </div>
                 </div>
             
