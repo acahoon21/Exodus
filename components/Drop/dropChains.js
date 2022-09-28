@@ -8,32 +8,37 @@ const style = {
     Polygon: `text-purple-500 hover:text-purple-300 hover:underline underline-offset-4`,
     Goerli: `text-gray-500 hover:text-gray-200 hover:underline underline-offset-4`,
     Ava: `text-red-500 hover:text-red-300 hover:underline underline-offset-4`,
-    chev: `text-gray-400`
+    chev: `text-cyan-300`,
+    chev2: `text-sky-400`,
+    chev3: `text-fuchsia-400`
+
 }
 
-const Droppy = () => {
+//{<span className={style.chev2}>⌄</span><span className={style.chev3}>⌄</span>}
+
+const DropChains = () => {
     const [, switchNetwork] = useNetwork()
     return (
         <Popover className="relative">
-            <Popover.Button>Chains <span className={style.chev}>⌄</span></Popover.Button>
+            <Popover.Button>⛓ <span className={style.chev}>⌄</span></Popover.Button>
             
-            <Popover.Panel className="absolute z-10">
+            <Popover.Panel className="absolute z-10 py-1 px-1 bg-[#04111d] rounded border border-red-500 w-28">
                 <div className="grid grid-cols-2">
                     <ul>
                         <li>
-                            <a className={style.Ethereum} onClick={() => switchNetwork(ChainId.Mainnet)}>Ethereum</a>
+                            <div className={style.Ethereum} onClick={() => switchNetwork(ChainId.Mainnet)}>Ethereum</div>
                         </li>
                         <li>
-                            <a className={style.Ava} onClick={() => switchNetwork(ChainId.Avalanche)}>Avalanche</a>
+                            <div className={style.Ava} onClick={() => switchNetwork(ChainId.Avalanche)}>Avalanche</div>
                         </li>
                         <li>
-                            <a className={style.Binance} onClick={() => switchNetwork(ChainId.BSC)}>Binance</a>
+                            <div className={style.Binance} onClick={() => switchNetwork(ChainId.BSC)}>Binance</div>
                         </li>
                         <li>
-                            <a className={style.Polygon} onClick={() => switchNetwork(ChainId.Polygon)}>Polygon</a>
+                            <div className={style.Polygon} onClick={() => switchNetwork(ChainId.Polygon)}>Polygon</div>
                         </li>
                         <li>
-                            <a className={style.Goerli} onClick={() => switchNetwork(ChainId.Goerli)}>Goerli</a>
+                            <div className={style.Goerli} onClick={() => switchNetwork(ChainId.Goerli)}>Goerli</div>
                         </li>
                     </ul>
                 </div>
@@ -43,4 +48,4 @@ const Droppy = () => {
 }
 
 
-export default Droppy
+export default DropChains

@@ -4,7 +4,8 @@ import { AiOutlineDown } from 'react-icons/ai'
 import ethLogo from '../../assets/eth.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ThirdwebSDK } from "@thirdweb-dev/sdk"
+import { ThirdwebSDK, TransactionResult } from "@thirdweb-dev/sdk"
+import { useAddress, useNetwork } from '@thirdweb-dev/react'
 
 const style = {
     title: 'relative flex items-center justify-center text-white text-[40px] font-semibold',
@@ -25,6 +26,23 @@ const style = {
 }
 
 const Wallet = () => {
+    const [, switchNetwork] = useNetwork();
+    const address = useAddress();
+
+    async function handleChange(e: any) {
+        try {
+            e.preventDefault();
+
+            let transactionResult: undefined | TransactionResult = undefined;
+
+            const { amount, addressTo } = e.target.elements;
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
     return (
         <div>
         <div className={style.wrapper}>

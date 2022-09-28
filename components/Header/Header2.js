@@ -10,7 +10,7 @@ import { CgProfile } from 'react-icons/cg'
 //import Account from './Account/Account'
 import ConnectWallet from '../ConnectWallet'
 //import { useNetwork, ChainId } from '@thirdweb-dev/react'
-import Droppy from '../droppy'
+import DropChains from '../Drop/dropChains'
 
 
 const style = {
@@ -55,7 +55,7 @@ const Header2 = () => {
             </Link>
             <div className={style.cheating}> ....... </div>
             <div className={style.button} /*onClick={() => switchNetwork(ChainId.Mainnet)}*/>
-                <Droppy/>
+                <DropChains/>
             </div>
             <div className={style.cheating}> . </div>
             <Link href='../../currency/testing'>
