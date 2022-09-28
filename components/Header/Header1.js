@@ -46,10 +46,10 @@ const Header1 = () => {
                 <div className={style.headerItem}> <DropMkt/> </div>
                 <div className={style.headerItem}> <DropSwap/> </div>
                 <div className={style.headerItem}> <DropInfo/> </div>
+                <Link href='../../currency/testing'>
             <div className={style.cheating}> . </div>
-            <Link href='../../currency/testing'>
-                <div className={style.button}> <DropChains/> </div>
             </Link>
+                <div className={style.button}> <DropChains/> </div>
             <div className={style.cheating}> . </div>
             <div className={style.headerIcon}> <DropProfile/> </div>
             <Link href='../../general/games'>
