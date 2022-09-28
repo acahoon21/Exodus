@@ -29,7 +29,7 @@ const Wallet = () => {
     const [, switchNetwork] = useNetwork();
     const address = useAddress();
 
-    async function handleChange(e: any) {
+    /*async function handleChange(e: any) {
         try {
             e.preventDefault();
 
@@ -40,7 +40,7 @@ const Wallet = () => {
         } catch (error) {
             console.error(error);
         }
-    }
+    }*/
 
 
     return (
@@ -69,7 +69,7 @@ const Wallet = () => {
                         className={style.transferPropInput}
                         placeholder="0.0"
                         pattern="^[0-9]*[.,]?[0-9]*$"
-                        onChange={(e) => handleChange(e, 'amount')}
+                        //onChange={(e) => handleChange(e, 'amount')}
                     />
                     <div className={style.currencySelector}>
                         <div className={style.currencySelectorContent}>
@@ -86,11 +86,11 @@ const Wallet = () => {
                         type="text"
                         className={style.transferPropInput}
                         placeholder="To Address 0x ..."
-                        onChange={(e) => handleChange(e, 'addressTo')}
+                        //onChange={(e) => handleChange(e, 'addressTo')}
                     />
                     <div className={style.currencySelector}></div>
                 </div>
-                <div onClick={(e) => handleSubmit(e)} className={style.confirmButton}>
+                <div /*onClick={(e) => handleSubmit(e)}*/ className={style.confirmButton}>
                     Confirm
                 </div>
             </div>

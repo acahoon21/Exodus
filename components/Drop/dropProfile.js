@@ -36,11 +36,6 @@ const DropMkt = () => {
                                 <div className={style.Ethereum}>Profile</div>
                             </Link>
                         </li>
-                        <li>
-                        <Link href='../../currency/onRamp'>
-                                <div className={style.Ethereum}>Ramp</div>
-                            </Link>
-                        </li>
                     </ul>
                 </div>
             </Popover.Panel>

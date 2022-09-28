@@ -30,7 +30,7 @@ const Header1 = () => {
     return <div className={style.wrapper}>
         <Link href="/">
             <div className={style.logoContainer}>
-                <Image src={fyrefliLogo} height={40} width={40} />
+                <Image src={fyrefliLogo} height={40} width={40} alt='' />
                 <div className={style.logoText}>FYREFLi</div>
             </div>
         </Link>

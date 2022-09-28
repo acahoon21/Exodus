@@ -21,14 +21,14 @@ const DropMkt = () => {
     const [, switchNetwork] = useNetwork()
     return (
         <Popover className="relative">
-            <Popover.Button> Marketplace <span className={style.chev}>⌄</span></Popover.Button>
+            <Popover.Button> Marketplace</Popover.Button>
 
-            <Popover.Panel className="absolute z-10 py-1 px-1 bg-[#04111d] rounded border border-cyan-300 w-30">
+            <Popover.Panel className="absolute z-10 py-1 px-1 bg-[#04111d] rounded border border-cyan-300 w-28">
                 <div className="grid grid-cols-2">
                     <ul>
                         <li>
                             <Link href='../../general/all'>
-                                <div className={style.Ethereum}> All4Sale </div>
+                                <div className={style.Ethereum}> Explore </div>
                             </Link>
                         </li>
                         <li>
@@ -38,7 +38,7 @@ const DropMkt = () => {
                         </li>
                         <li>
                         <Link href='../../general/3create'>
-                                <div className={style.Ethereum}>List4Sale</div>
+                                <div className={style.Ethereum}>Create</div>
                             </Link>
                         </li>
                         <li>
@@ -52,8 +52,8 @@ const DropMkt = () => {
                             </Link>
                         </li>
                         <li>
-                        <Link href='../../currency/testing'>
-                                <div className={style.Ava}>GiveWay!</div>
+                        <Link href='../../general/giveAway'>
+                                <div className={style.Ava}>GiveAway!</div>
                             </Link>
                         </li>
                     </ul>

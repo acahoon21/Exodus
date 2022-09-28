@@ -21,9 +21,9 @@ const DropInfo = () => {
     const [, switchNetwork] = useNetwork()
     return (
         <Popover className="relative">
-            <Popover.Button> Info <span className={style.chev}>⌄</span></Popover.Button>
+            <Popover.Button> Info</Popover.Button>
 
-            <Popover.Panel className="absolute z-10 py-1 px-1 bg-[#04111d] rounded border border-cyan-300 w-28">
+            <Popover.Panel className="absolute z-10 py-1 px-1 bg-[#04111d] rounded border border-cyan-300 w-24">
                 <div className="grid grid-cols-2">
                     <ul>
                         <li>

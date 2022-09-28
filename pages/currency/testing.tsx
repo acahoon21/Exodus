@@ -31,7 +31,7 @@ import {
   
   const Create: NextPage = () => {
     // Next JS Router hook to redirect to other pages
-    const router = useRouter();
+    /*const router = useRouter();
     const networkMismatch = useNetworkMismatch();
     const [, switchNetwork] = useNetwork();
 
@@ -82,13 +82,13 @@ import {
       } catch (error) {
         console.error(error);
       }
-    }
+    }*/
 
     return (
-      <form onSubmit={(e) => handleChange(e)}>
+      //<form onSubmit={(e) => handleChange(e)}>
           <div>
           <div className={style.title}>Testing Grounds</div>
-          <div className={style.info}>This is a development page. Nothing interesting here</div>
+          <div className={style.info}>Hidden page. This is where you would claim a GiveAway.</div>
         <div className={style.wrapper}>
           {/* Form Section */}
           <div className={style.content}>
@@ -159,7 +159,7 @@ import {
           </div>
         </div>
         </div>
-      </form>
+      //</form>
     );
   };
   

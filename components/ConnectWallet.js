@@ -40,7 +40,7 @@ import {
     // If no wallet is connected, show connect wallet options
     return (
       <div>
-        <button onClick={() => connectWithMetamask()}>Connect!</button>
+        <button className={style.Ethereum} onClick={() => connectWithMetamask()}>Connect!</button>
       </div>
     );
   };
