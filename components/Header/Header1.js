@@ -19,7 +19,7 @@ const style = {
     searchIcon: 'text-[#8a939b] mx-3 font-bold text-lg',
     searchInput: 'h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]',
     headerItems: 'flex items-center justify-end',
-    headerItem: 'text-white px-4 font-bold hover:text-[#fb4848] border border-transparent hover:border-cyan-300 bg hover:bg-[#04111d] rounded-lg shadow-lg hover:shadow-cyan-400/90 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 ... cursor-pointer',
+    headerItem: 'text-white px-4 font-bold hover:text-[#fb4848] border border-transparent hover:border-cyan-300 bg hover:bg-[#04111d] rounded-full shadow-lg hover:shadow-cyan-400/90 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 ... cursor-pointer',
     headerIcon: 'text-[#8a939b] text-3xl px-4 hover:text-white cursor-pointer',
     cheating: 'text-[#04111d] px-4 font-bold text-[#04111d]',
     button: `border px-1 border-[#fb4848] bg-[#04111d] p-[0.1rem] text-xl font-semibold rounded-lg cursor-pointer text-[#fb4848]`,

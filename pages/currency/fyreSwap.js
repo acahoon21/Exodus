@@ -19,9 +19,9 @@ const style = {
     currencySelectorArrow: `text-lg`,
     confirmButton: `bg-[#f51111] my-2 rounded-2xl py-5 px-8 text-2xl font-semibold flex items-center justify-center cursor-pointer border border-[#fb4848] hover:border-white`,
     swap: `text-[#fb4848]`,
-    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-lg mr-5 text-yellow-300 hover:bg-black hover:text-yellow-100 border border-yellow-500 hover:border-yellow-100 cursor-pointer shadow-lg hover:shadow-yellow-500/80 bg-gradient-to-r from-yellow-500 via-purple-500 to-red-500',
-    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-lg mr-5 text-cyan-300 hover:bg-black hover:text-cyan-100 border border-cyan-400 hover:border-cyan-100 cursor-pointer shadow-lg hover:shadow-cyan-500/90 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500',
-    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-lg mr-5 text-purple-200 hover:bg-black hover:text-purple-100 border border-purple-400 hover:border-purple-100 cursor-pointer shadow-lg hover:shadow-purple-500 bg-gradient-to-r from-purple-500 via-indigo-500 to-red-500',
+    binanceButton: 'relative text-lg font-semibold px-8 py-1 bg-yellow-500 rounded-full mr-5 text-yellow-300 hover:bg-black hover:text-yellow-100 border border-yellow-500 hover:border-yellow-100 cursor-pointer shadow-lg hover:shadow-yellow-500/80 bg-gradient-to-r from-yellow-500 via-purple-500 to-red-500',
+    ethButton: 'relative text-lg font-semibold px-8 py-1 bg-blue-500 rounded-full mr-5 text-cyan-300 hover:bg-black hover:text-cyan-100 border border-cyan-400 hover:border-cyan-100 cursor-pointer shadow-lg hover:shadow-cyan-500/90 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500',
+    polyButton: 'relative text-lg font-semibold px-8 py-1 bg-purple-500 rounded-full mr-5 text-purple-200 hover:bg-black hover:text-purple-100 border border-purple-400 hover:border-purple-100 cursor-pointer shadow-lg hover:shadow-purple-500 bg-gradient-to-r from-purple-500 via-indigo-500 to-red-500',
     info: `w-screen flex items-center justify-center text-gray-500`
 }
 

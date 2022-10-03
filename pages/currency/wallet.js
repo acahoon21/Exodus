@@ -4,8 +4,8 @@ import { AiOutlineDown } from 'react-icons/ai'
 import ethLogo from '../../assets/eth.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ThirdwebSDK, TransactionResult } from "@thirdweb-dev/sdk"
-import { useAddress, useNetwork } from '@thirdweb-dev/react'
+//import { ThirdwebSDK, TransactionResult } from "@thirdweb-dev/sdk"
+//import { useAddress, useNetwork } from '@thirdweb-dev/react'
 
 const style = {
     title: 'relative flex items-center justify-center text-white text-[40px] font-semibold',
@@ -26,23 +26,7 @@ const style = {
 }
 
 const Wallet = () => {
-    const [, switchNetwork] = useNetwork();
-    const address = useAddress();
-
-    /*async function handleChange(e: any) {
-        try {
-            e.preventDefault();
-
-            let transactionResult: undefined | TransactionResult = undefined;
-
-            const { amount, addressTo } = e.target.elements;
-
-        } catch (error) {
-            console.error(error);
-        }
-    }*/
-
-
+    
     return (
         <div>
         <div className={style.wrapper}>
@@ -69,7 +53,7 @@ const Wallet = () => {
                         className={style.transferPropInput}
                         placeholder="0.0"
                         pattern="^[0-9]*[.,]?[0-9]*$"
-                        //onChange={(e) => handleChange(e, 'amount')}
+                        onChange={(e) => handleChange(e, 'amount')}
                     />
                     <div className={style.currencySelector}>
                         <div className={style.currencySelectorContent}>
@@ -86,11 +70,11 @@ const Wallet = () => {
                         type="text"
                         className={style.transferPropInput}
                         placeholder="To Address 0x ..."
-                        //onChange={(e) => handleChange(e, 'addressTo')}
+                        onChange={(e) => handleChange(e, 'addressTo')}
                     />
                     <div className={style.currencySelector}></div>
                 </div>
-                <div /*onClick={(e) => handleSubmit(e)}*/ className={style.confirmButton}>
+                <div onClick={(e) => handleSubmit(e)} className={style.confirmButton}>
                     Confirm
                 </div>
             </div>

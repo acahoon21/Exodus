@@ -1,0 +1,26 @@
+import Moralis from 'moralis';
+import { EvmChain } from '@moralisweb3/evm-utils';
+
+export default async function handler(req, res) {
+    // reads the api key from .env.local and starts Moralis SDK
+    await Moralis.start({ apiKey: process.env.MORALIS_API_KEY });
+
+    const address = '0x112E994Ca7dD149658F0cA0816A16342BF42a3C1';
+
+    // Promise.all() for receiving data async from two endpoints
+    const [nativeBalance, tokenBalances] = await Promise.all([
+        Moralis.EvmApi.balance.getNativeBalance({
+            chain: EvmChain.GOERLI,
+            address,
+        }),
+        Moralis.EvmApi.token.getWalletTokenBalances({
+            chain: EvmChain.GOERLI,
+            address,
+        }),
+    ]);
+    res.status(200).json({
+        // formatting the output
+        nativeBalance: nativeBalance.result.balance.ether,
+        tokenBalances: tokenBalances.result.map((token) => token.display()),
+    });
+}
